@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/31 01:12:18 by sbadr             #+#    #+#              #
-#    Updated: 2023/09/02 11:24:29 by sbadr            ###   ########.fr        #
+#    Created: 2023/08/31 01:12:50 by sbadr             #+#    #+#              #
+#    Updated: 2023/09/02 17:29:25 by sbadr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
-SRCS= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJS= $(SRCS:%.cpp=%.o)
 FLAGS= -Wall -Wextra -Werror -std=c++98
 NAME= program

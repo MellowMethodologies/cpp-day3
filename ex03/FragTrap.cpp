@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 01:12:32 by sbadr             #+#    #+#             */
-/*   Updated: 2023/08/31 01:12:33 by sbadr            ###   ########.fr       */
+/*   Created: 2023/08/31 01:12:58 by sbadr             #+#    #+#             */
+/*   Updated: 2023/09/02 17:33:52 by sbadr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ FragTrap::FragTrap(const FragTrap &t)
 }
 
 FragTrap:: FragTrap(std::string name):ClapTrap(name)
+{
+    health = 100;
+    energy = 100;
+    dmg = 30;
+    std::cout<< "FragTrap constructor call\n";
+}
+
+FragTrap:: FragTrap():ClapTrap("unknown")
 {
     health = 100;
     energy = 100;
