@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 01:13:17 by sbadr             #+#    #+#             */
-/*   Updated: 2023/09/02 16:23:54 by sbadr            ###   ########.fr       */
+/*   Created: 2023/08/31 01:11:08 by sbadr             #+#    #+#             */
+/*   Updated: 2023/08/31 01:11:09 by sbadr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,12 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
     energy = 50;
     dmg = 20;
 
-    std::cout << "ScavTrap initialized." << std::endl;
-}
-
-ScavTrap::ScavTrap( ) : ClapTrap("unknown")
-{
-    health = 100;
-    energy = 50;
-    dmg = 20;
-
-    std::cout << "ScavTrap initialized." << std::endl;
+    std::cout << "ScavTrap " << this->name << " added." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &t)
 {
-    this->name = t.name;
-    this->health = t.health;
-    this->energy = t.energy;
-    this->dmg = t.dmg;
     *this = t;
-    std::cout << " ScavTrap cpoy constructor"<< std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &t)
@@ -58,8 +44,8 @@ void    ScavTrap::attack( std::string const& target ) {
         std::cout << " out of energy." << std::endl;
         return;
     }
-    std::cout << "ScavTrap " << this->name << " attacks " << target <<" causing " << this->dmg << " points of damage !" << std::endl;
-    this->energy--;
+    std::cout << "ScavTrap " << this->name << " attacks " << target <<"causing " << this->dmg << " points of damage !" << std::endl;
+    this->energy -= 1;
 }
 
 void    ScavTrap::guardGate() {

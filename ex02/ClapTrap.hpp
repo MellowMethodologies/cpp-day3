@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 01:12:40 by sbadr             #+#    #+#             */
-/*   Updated: 2023/08/31 01:12:41 by sbadr            ###   ########.fr       */
+/*   Created: 2023/08/31 01:13:10 by sbadr             #+#    #+#             */
+/*   Updated: 2023/09/02 12:58:31 by sbadr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class ClapTrap
         int energy;
         int dmg;
     public:
+        ClapTrap();
         ClapTrap(std::string name);
         ~ClapTrap();
-        ClapTrap();
         ClapTrap(const ClapTrap &);
         ClapTrap &operator=(const ClapTrap& t);
         std::string getName();

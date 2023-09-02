@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 01:12:56 by sbadr             #+#    #+#             */
-/*   Updated: 2023/08/31 01:12:57 by sbadr            ###   ########.fr       */
+/*   Created: 2023/08/31 01:12:30 by sbadr             #+#    #+#             */
+/*   Updated: 2023/08/31 01:12:31 by sbadr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap:public ClapTrap
+class FragTrap:virtual public ClapTrap
 {
     private:
 
