@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 01:13:17 by sbadr             #+#    #+#             */
-/*   Updated: 2023/09/02 12:58:38 by sbadr            ###   ########.fr       */
+/*   Created: 2023/08/31 01:11:08 by sbadr             #+#    #+#             */
+/*   Updated: 2023/08/31 01:11:09 by sbadr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-
-
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 {

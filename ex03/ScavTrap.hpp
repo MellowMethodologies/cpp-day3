@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 01:13:19 by sbadr             #+#    #+#             */
-/*   Updated: 2023/09/02 12:35:36 by sbadr            ###   ########.fr       */
+/*   Created: 2023/08/31 01:12:45 by sbadr             #+#    #+#             */
+/*   Updated: 2023/08/31 01:12:46 by sbadr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ScavTrap : public ClapTrap{
         ~ScavTrap();
         void attack(std::string const& target);
         void    guardGate();
+    private:
 };
 
 #endif

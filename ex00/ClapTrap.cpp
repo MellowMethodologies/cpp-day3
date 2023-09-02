@@ -1,4 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/31 01:13:23 by sbadr             #+#    #+#             */
+/*   Updated: 2023/09/02 13:00:09 by sbadr            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap() : name("saad"),health(10),energy(10),dmg(0)
+{
+    std::cout << "default constructor call" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name):name(name),health(10),energy(10),dmg(0){
     std::cout << "default constructor call" << std::endl;
@@ -24,35 +41,49 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &t){
 
 void ClapTrap::attack(const std::string& target)
 {
-    if (energy)
+    if (this->energy)
         --this->energy;
     else
     {
-        std::cout << "not enough energy!!" << std::endl;
+        std::cout << this->name << " don't have enough energy!!" << std::endl;
         return ;
     }
-    std::cout << "ClapTrap " << target << " attacks " << target << ", causing " << dmg << " points of damage!" << std::endl;
+    std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << dmg << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (health <= (int)amount)
+    if (health <= 0)
     {
-        std::cout << "ClapTrap" << name << "isDead" << std::endl;
+        std::cout << "ClapTrap " << name << " isDead" << std::endl;
         return ;
     }
-    health -= amount;
+    std::cout<< this->name << " has taken " << amount << " dmg"<< std::endl;
+    this->dmg = amount;
+    this->health -= amount;
 }
+
+std::string ClapTrap::getName()
+{
+    return (this->name);
+}
+
+void ClapTrap::setName(std::string newName)
+{
+    this->name = newName;
+}       
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
+    if (this->health > 0)
+        std::cout << this->name << " restored " << amount << " HP\n";
     if (energy)
         --this->energy;
     else
     {
-        std::cout << "not enough energy!!" << std::endl;
+        std::cout << this->name << " don't have enough energy!!" << std::endl;
         return ;
     }
-    this->health = amount;
+    this->health += amount;
 }
 
