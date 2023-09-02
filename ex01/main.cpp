@@ -6,17 +6,21 @@
 /*   By: sbadr <sbadr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 01:13:13 by sbadr             #+#    #+#             */
-/*   Updated: 2023/09/02 12:34:00 by sbadr            ###   ########.fr       */
+/*   Updated: 2023/09/02 17:13:37 by sbadr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main() {
-    ClapTrap wakanda("wakanda");
-    ClapTrap isparta("isparta");
-	ClapTrap *traitor = new ClapTrap(wakanda);
+    ScavTrap wakanda("wakanda");
+    ScavTrap isparta("isparta");
+	ScavTrap *traitor = new ScavTrap(wakanda);
 
+	std::cout<<std::endl;
+	wakanda.guardGate();
+	isparta.guardGate();
+	traitor->guardGate();
 	std::cout << std::endl;
 
 	wakanda.attack("isparta");
@@ -26,9 +30,11 @@ int main() {
 	std::cout << std::endl;
 
 	wakanda.takeDamage(80);
+	wakanda.takeDamage(20);
+	wakanda.takeDamage(20);
 	isparta.takeDamage(5);
 	isparta.takeDamage(5);
-	isparta.takeDamage(1);
+	isparta.takeDamage(10);
 	traitor->takeDamage(9);
 
 	std::cout << std::endl;
